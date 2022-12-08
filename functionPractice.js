@@ -75,4 +75,69 @@ function lengthOf(word) {
   }
   return [wordLength, vowels, consonant];
 }
-console.log(lengthOf("palabra "));
+// console.log(lengthOf("palabra "));
+
+/*9 - Create a function that loops over the array beneath and each it finds a number 1 console.log("Found one!"). 
+10 - Create a function that loops over the array beneath and returns the indexes in which 1 appears. E.g., 
+if the list is [0, 1, 0, 1, 0, 0], it would return [1, 3]. 
+
+11 - Complete Project Euler No.1*/
+masterArray = [
+  1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0,
+  1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0,
+  1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0,
+  1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+  1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0,
+  0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1,
+  1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1,
+  1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0,
+  0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1,
+  1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1,
+];
+function masterArrayList() {
+  for (let i = 0; i < masterArray.length; i++) {
+    if (masterArray[i] !== 0) {
+      console.log("Found one!", masterArray[i]);
+    }
+  }
+}
+// console.log(masterArrayList());
+// masterArrayList();
+
+function masterArrayList2() {
+  let arrayOfOnes = [];
+  for (let i = 0; i < masterArray.length; i++) {
+    if (masterArray[i] !== 0) {
+      arrayOfOnes.push(i);
+    }
+  }
+  return arrayOfOnes;
+}
+// console.log(masterArrayList2());
+
+/*If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.*/
+/*function multiples(number) {
+  let sum = 0;
+  multiplesOfTen = [];
+  for (let i = 0; i < 10; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+      multiplesOfTen.push(i);
+    }
+  }
+  console.log(multiplesOfTen);
+  return sum;
+}
+console.log(multiples(10));*/
+// sum of multiples of 3 or 5 below 1000 --------------------------------------->
+function multiples(number) {
+  let sum = 0;
+  for (let i = 0; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum = sum + i;
+    }
+  }
+  return sum;
+}
+console.log(multiples(1000));
