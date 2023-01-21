@@ -153,10 +153,19 @@ outputs your fortune to the screen like so: "You will be a X in Y, and married t
 Call that function 3 times with 3 different values for the arguments.*/
 
 
-function tellFortune(numberOfChildren, partnerName, geographicLocation, jobTitle) {
-  console.log(`You will be a ${jobTitle} in ${geographicLocation}, and married to ${partnerName} with ${numberOfChildren} kid(s).`);
+// function tellFortune(numberOfChildren, partnerName, geographicLocation, jobTitle) {
+//   console.log(`You will be a ${jobTitle} in ${geographicLocation}, and married to ${partnerName} with ${numberOfChildren} kid(s).`);
+// }
+
+// tellFortune(5,'Joanna','Texas','Programmer');
+// tellFortune(1,'Xavier','New York','Marketing Manager');
+// tellFortune(4,'Melisa','Ohaio','Administrative Assistant');
+
+// 4. Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+function areaOfTriangle(side1, side2, side3) {
+  s = (side1 + side2 + side3)/2;
+  area = Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+  return area;
 }
 
-tellFortune(5,'Joanna','Texas','Programmer');
-tellFortune(1,'Xavier','New York','Marketing Manager');
-tellFortune(4,'Melisa','Ohaio','Administrative Assistant');
+console.log(areaOfTriangle(5,6,7));
